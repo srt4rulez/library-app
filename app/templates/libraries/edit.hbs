@@ -1,0 +1,39 @@
+<h2>Edit Library</h2>
+
+<div class="form-group row">
+
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
+
+    <div class="col-sm-10">
+        {{input id="name" type="text" value=model.name class="form-control" placeholder="The name of the Library"}}
+    </div>
+
+</div>
+
+<div class="form-group row">
+
+    <label for="address" class="col-sm-2 col-form-label">Address</label>
+
+    <div class="col-sm-10">
+        {{input id="address" type="text" value=model.address class="form-control" placeholder="The address of the Library"}}
+    </div>
+
+</div>
+
+<div class="form-group row">
+
+    <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+
+    <div class="col-sm-10">
+        {{input id="phone" type="text" value=model.phone class="form-control" placeholder="The phone number of the Library"}}
+    </div>
+
+</div>
+
+<div class="form-group row">
+
+    <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-success" {{action 'saveLibrary' model}}>Save Library</button>
+    </div>
+
+</div>
