@@ -16,13 +16,13 @@
 
         <div class="col-xs-10 offset-xs-1 col-sm-6 offset-sm-1 col-md-5 offset-md-2">
 
-            {{input type="email" value=emailAddress class="form-control form-control-lg" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+            {{input type="email" value=model.email class="form-control form-control-lg" placeholder="Please type your e-mail address." autofocus="autofocus"}}
 
         </div>
 
         <div class="col-xs-10 offset-xs-1 offset-sm-0 col-sm-4 col-md-3">
 
-            <button class="btn btn-primary btn-lg" disabled={{isDisabled}} {{action 'saveInvitation'}}>Request invitation</button>
+            <button class="btn btn-primary btn-lg" disabled={{isDisabled}} {{action 'saveInvitation' model}}>Request invitation</button>
 
         </div>
 
