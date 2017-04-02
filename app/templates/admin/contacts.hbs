@@ -1,27 +1,35 @@
 <h1>Contacts</h1>
 
-<table class="table table-bordered">
+{{#if model}}
 
-    <thead>
+    <table class="table table-bordered">
 
-        <tr>
-
-            <th>Email</th>
-            <th>Message</th>
-
-        </tr>
-
-        {{#each model as |contact|}}
+        <thead>
 
             <tr>
 
-                <td>{{contact.email}}</td>
-                <td>{{contact.message}}</td>
+                <th>Email</th>
+                <th>Message</th>
 
             </tr>
 
-        {{/each}}
+            {{#each model as |contact|}}
 
-    </thead>
+                <tr>
 
-</table>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.message}}</td>
+
+                </tr>
+
+            {{/each}}
+
+        </thead>
+
+    </table>
+
+{{else}}
+
+    <p>No contacts yet.</p>
+
+{{/if}}
