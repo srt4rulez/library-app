@@ -10,6 +10,7 @@
 
                 <th>Email</th>
                 <th>Message</th>
+                <th>Actions</th>
 
             </tr>
 
@@ -19,6 +20,9 @@
 
                     <td>{{contact.email}}</td>
                     <td>{{contact.message}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-block" {{action 'deleteContact' contact}}>Delete</button>
+                    </td>
 
                 </tr>
 

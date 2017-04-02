@@ -10,6 +10,7 @@
 
                 <th>ID</th>
                 <th>Email</th>
+                <th>Actions</th>
 
             </tr>
 
@@ -19,6 +20,9 @@
 
                     <th>{{invitation.id}}</th>
                     <td>{{invitation.email}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-block" {{action 'deleteInvitation' invitation}}>Delete</button>
+                    </td>
 
                 </tr>
 
