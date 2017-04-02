@@ -1,0 +1,44 @@
+<h1>Contact Us</h1>
+
+{{#if responseMessage}}
+
+    <div class="alert alert-success">
+        {{responseMessage}}
+    </div>
+
+{{/if}}
+
+<div class="form-group row">
+
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+
+    <div class="col-sm-10">
+
+        {{input value=model.email type="email" class="form-control" id="email" placeholder="Email"}}
+
+    </div>
+
+</div>
+
+<div class="form-group row">
+
+    <label for="message" class="col-sm-2 col-form-label">Message</label>
+
+    <div class="col-sm-10">
+
+        {{textarea id="message" class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=model.message}}
+
+    </div>
+
+</div>
+
+
+<div class="form-group row">
+
+    <div class="offset-sm-2 col-sm-10">
+
+        <button type="submit" class="btn btn-primary" {{action 'sendMessage' model}} disabled={{isDisabled}}>Send Message</button>
+
+    </div>
+
+</div>

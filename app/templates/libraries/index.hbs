@@ -1,0 +1,35 @@
+<h2>List</h2>
+
+<div class="row">
+
+    {{#each model as |lib|}}
+
+        <div class="col-sm-4">
+
+            <div class="card">
+
+                <h3 class="card-header">{{lib.name}}</h3>
+
+                <div class="card-block">
+
+                    <p>{{lib.address}}</p>
+
+                    <p class="mb-0">{{lib.phone}}</p>
+
+                </div>
+                <!-- /.card-block -->
+
+            </div>
+            <!-- /.card -->
+
+        </div>
+        <!-- /.col-sm-4 -->
+
+    {{else}}
+
+        <p>There are no libraries yet. Go {{#link-to 'libraries.new'}}add one{{/link-to}}!</p>
+
+    {{/each}}
+
+</div>
+<!-- /.row -->
