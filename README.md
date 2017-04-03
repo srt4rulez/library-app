@@ -1,7 +1,8 @@
-# library-app
+# [library-app](https://library-app-db201.firebaseapp.com/)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ember 2 Tutorial via [yoember.com](http://yoember.com/)
+
+Generated README from ember below:
 
 ## Prerequisites
 
@@ -38,10 +39,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
