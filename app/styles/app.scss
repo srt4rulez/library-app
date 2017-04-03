@@ -3,3 +3,9 @@
 body {
     padding-top: 20px;
 }
+
+.card--library-item {
+    p:last-child {
+        margin-bottom: 0;
+    }
+}

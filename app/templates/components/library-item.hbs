@@ -1,22 +1,39 @@
-<div class="card">
+<div class="card card--library-item">
 
-    <h3 class="card-header">{{item.name}}</h3>
+    <h3 class="card-header">{{if item.name item.name 'Library Name'}}</h3>
 
-    <div class="card-block">
+    {{#if item.hasBody}}
 
-        <p>{{item.address}}</p>
+        <div class="card-block">
 
-        <p class="mb-0">{{item.phone}}</p>
+            {{#if item.address}}
 
-    </div>
-    <!-- /.card-block -->
+                <p>{{item.address}}</p>
 
-    <div class="card-footer">
+            {{/if}}
 
-        {{yield}}
+            {{#if item.phone}}
 
-    </div>
-    <!-- /.card-footer -->
+                <p>{{item.phone}}</p>
+
+            {{/if}}
+
+        </div>
+        <!-- /.card-block -->
+
+    {{/if}}
+
+    {{!-- hasBlock will be true if yield is true --}}
+    {{#if hasBlock}}
+
+        <div class="card-footer">
+
+            {{yield}}
+
+        </div>
+        <!-- /.card-footer -->
+
+    {{/if}}
 
 </div>
 <!-- /.card -->

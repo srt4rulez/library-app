@@ -8,5 +8,6 @@ export default DS.Model.extend({
     phone:   DS.attr('string'),
 
     isValid: Ember.computed.notEmpty('name'),
+    hasBody: Ember.computed.or('address', 'phone'),
 
 });
