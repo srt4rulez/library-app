@@ -12,10 +12,10 @@
 
         <ul class="navbar-nav">
 
-            {{#link-to 'index' tagName="li" classNames="nav-item"}}<a href="" class="nav-link">Home</a>{{/link-to}}
-            {{#link-to 'libraries' tagName="li" classNames="nav-item"}}<a href="" class="nav-link">Libraries</a>{{/link-to}}
-            {{#link-to 'about' tagName="li" classNames="nav-item"}}<a href="" class="nav-link">About</a>{{/link-to}}
-            {{#link-to 'contact' tagName="li" classNames="nav-item"}}<a href="" class="nav-link">Contact</a>{{/link-to}}
+            {{#nav-link-to 'index'}}Home{{/nav-link-to}}
+            {{#nav-link-to 'libraries'}}Libraries{{/nav-link-to}}
+            {{#nav-link-to 'about'}}About{{/nav-link-to}}
+            {{#nav-link-to 'contact'}}Contact{{/nav-link-to}}
 
         </ul>
 
@@ -29,8 +29,8 @@
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
 
-                    {{#link-to 'admin.invitations' classNames="dropdown-item"}}Invitations{{/link-to}}
-                    {{#link-to 'admin.contacts' classNames="dropdown-item"}}Contacts{{/link-to}}
+                    {{#dropdown-link-to 'admin.invitations'}}Invitations{{/dropdown-link-to}}
+                    {{#dropdown-link-to 'admin.contacts'}}Contacts{{/dropdown-link-to}}
 
                 </div>
 
