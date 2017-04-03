@@ -6,29 +6,12 @@
 
         <div class="col-sm-4">
 
-            <div class="card">
+            {{#library-item item=lib}}
 
-                <h3 class="card-header">{{lib.name}}</h3>
+                {{#link-to 'libraries.edit' lib.id class="btn btn-success btn-sm"}}Edit{{/link-to}}
+                <button class="btn btn-danger btn-sm" {{action 'deleteLibrary' lib}}>Delete</button>
 
-                <div class="card-block">
-
-                    <p>{{lib.address}}</p>
-
-                    <p class="mb-0">{{lib.phone}}</p>
-
-                </div>
-                <!-- /.card-block -->
-
-                <div class="card-footer">
-
-                    {{#link-to 'libraries.edit' lib.id class="btn btn-success btn-sm"}}Edit{{/link-to}}
-                    <button class="btn btn-danger btn-sm" {{action 'deleteLibrary' lib}}>Delete</button>
-
-                </div>
-                <!-- /.card-footer -->
-
-            </div>
-            <!-- /.card -->
+            {{/library-item}}
 
         </div>
         <!-- /.col-sm-4 -->
