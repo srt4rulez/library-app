@@ -1,0 +1,35 @@
+<div class="card">
+
+    <div class="card-block">
+
+        {{#fader-label isShowing=createReady}}Created!{{/fader-label}}
+
+        {{#fader-label isShowing=deleteReady}}Deleted!{{/fader-label}}
+
+        <h3>{{sectionTitle}}</h3>
+
+        <div class="form-group {{unless isCounterValid 'has-danger'}}">
+
+                <label for={{sectionTitle}} class="form-control-label mr-sm-2">Number of new records:</label>
+
+                {{input
+                    id=sectionTitle
+                    value=counter
+                    class=(concat "form-control" (unless isCounterValid " form-control-danger"))
+                    placeholder=placeholder
+                }}
+
+        </div>
+
+        <button class="btn btn-primary" {{action "generateAction"}} disabled={{if isCounterValid false true}}>
+            Generate {{sectionTitle}}
+        </button>
+
+
+        <button class="btn btn-danger" {{action "deleteAction"}}>
+            Delete All {{sectionTitle}}
+        </button>
+
+    </div>
+
+</div>

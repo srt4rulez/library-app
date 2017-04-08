@@ -9,3 +9,12 @@ body {
         margin-bottom: 0;
     }
 }
+
+.label-fade {
+    margin: 10px;
+    opacity: 0;
+    @include transition(all 0.5s);
+    &.label-show {
+        opacity: 1;
+    }
+}
