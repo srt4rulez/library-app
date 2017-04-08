@@ -26,6 +26,9 @@ Router.map(function() {
 
     });
 
+    this.route('authors');
+    this.route('books');
+
 });
 
 export default Router;
